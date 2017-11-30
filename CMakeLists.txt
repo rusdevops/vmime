@@ -39,9 +39,14 @@ SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY build/lib)
 
 SET(CMAKE_VERBOSE_MAKEFILE ON)
 
+# Package version number
+SET(VMIME_VERSION_MAJOR  0)
+SET(VMIME_VERSION_MINOR  9)
+SET(VMIME_VERSION_PATCH  2)
+set(VMIME_VERSION ${VMIME_VERSION_MAJOR}.${VMIME_VERSION_MINOR}.${VMIME_VERSION_PATCH})
 
 # Project
-PROJECT(vmime)
+PROJECT(vmime VERSION ${VMIME_VERSION})
 
 # Hunter package
 hunter_add_package(OpenSSL)
@@ -66,11 +71,6 @@ configure_package_config_file(
     "${PROJECT_CONFIG}"
      INSTALL_DESTINATION "${CONFIG_INSTALL_DIR}"
 )
-
-# Package version number
-SET(VMIME_VERSION_MAJOR  0)
-SET(VMIME_VERSION_MINOR  9)
-SET(VMIME_VERSION_MICRO  2)
 
 # API version number (libtool)
 #
