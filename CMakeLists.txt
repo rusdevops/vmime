@@ -51,17 +51,17 @@ PROJECT(VMIME VERSION ${VMIME_VERSION})
 # Hunter package
 hunter_add_package(OpenSSL)
 
-set(GENERATED_DIR "${CMAKE_CURRENT_BINARY_DIR}/generated")
+SET(GENERATED_DIR "${CMAKE_CURRENT_BINARY_DIR}/generated")
 
-set(CONFIG_INSTALL_DIR "lib/cmake/${PROJECT_NAME}")
-set(INCLUDE_INSTALL_DIR "include")
+SET(CONFIG_INSTALL_DIR "lib/cmake/${PROJECT_NAME}")
+SET(INCLUDE_INSTALL_DIR "include")
 
-set(VERSION_CONFIG "${GENERATED_DIR}/${PROJECT_NAME}ConfigVersion.cmake")
-set(PROJECT_CONFIG "${GENERATED_DIR}/${PROJECT_NAME}Config.cmake")
-set(TARGETS_EXPORT_NAME "${PROJECT_NAME}Targets")
-set(NAMESPACE "${PROJECT_NAME}::")
+SET(VERSION_CONFIG "${GENERATED_DIR}/${PROJECT_NAME}ConfigVersion.cmake")
+SET(PROJECT_CONFIG "${GENERATED_DIR}/${PROJECT_NAME}Config.cmake")
+SET(TARGETS_EXPORT_NAME "${PROJECT_NAME}Targets")
+SET(NAMESPACE "${PROJECT_NAME}::")
 
-include(CMakePackageConfigHelpers)
+INCLUDE(CMakePackageConfigHelpers)
 write_basic_package_version_file(
     "${VERSION_CONFIG}" COMPATIBILITY SameMajorVersion
 )
